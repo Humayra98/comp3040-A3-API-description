@@ -1,3 +1,4 @@
+# Slurpee Scout API
 
 ## API description
 
