@@ -11,7 +11,7 @@ This API takes a location in coordinates and a radius around that location, and 
 
 The resources returned include the owner, coordinates, and number of Slurpee sales of the top 3 most popular 7Eleven locations.
 
-### Example Response
+### Sample Response
 
 ```
 {
