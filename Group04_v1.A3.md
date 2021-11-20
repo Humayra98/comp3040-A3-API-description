@@ -6,10 +6,14 @@ This API takes a location in coordinates and a radius around that location, and 
 
 ## Endpoint with Parameters
 
+1. api/json/all- This is going to display all slurpee sales in Manitoba.
 
-## Description of Resources
+2. api/json/search- This endpoint has 3 parameters. This request will return most popular 7 eleven data based on these parameters listed below.
 
-The resources returned include the owner, coordinates, and number of Slurpee sales of the top 3 most popular 7Eleven locations.
+   -lat (float): Latitude of current location in decimal degrees. Required.
+   -lng (float): Longitude of current location in decimal degrees. Required.
+   -radius(int): Desired radius for the search in KM. Not required. Default value 10 KM
+
 
 ### Sample Response
 
