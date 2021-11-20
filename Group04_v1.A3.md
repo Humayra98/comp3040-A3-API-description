@@ -10,9 +10,9 @@ This API takes a location in coordinates and a radius around that location, and 
 
 2. api/json/search- This endpoint has 3 parameters. This request will return most popular 7 eleven data based on these parameters listed below.
 
-   -lat (float): Latitude of current location in decimal degrees. Required.
-   -lng (float): Longitude of current location in decimal degrees. Required.
-   -radius(int): Desired radius for the search in KM. Not required. Default value 10 KM
+   - lat (float): Latitude of current location in decimal degrees. Required.
+   - lng (float): Longitude of current location in decimal degrees. Required.
+   - radius(int): Desired radius for the search in KM. Not required. Default value 10 KM
 
 
 ### Sample Response
