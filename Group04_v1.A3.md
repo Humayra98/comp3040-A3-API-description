@@ -6,7 +6,7 @@ This API takes a location in coordinates and a radius around that location, and 
 
 ## Endpoint with Parameters
 
-1. api/json/all- This is going to display all slurpee stores' data in Manitoba.
+1. api/json/all- This is going to display all slurpee stores' data located in Manitoba.
 
 2. api/json/search- This endpoint has 3 parameters. This request will return most popular 7 eleven data based on these parameters listed below.
 
