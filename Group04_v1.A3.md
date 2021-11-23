@@ -16,7 +16,7 @@ https://slurpeesales.mb.ca/api/top_3
    * radius(int): Desired radius for the search in KM. Optional. Default value 10 KM.
 
 ## Description and Resources
-The resources returned include the store, owner, coordinates, and number of slurpee sales of a store.
+The resources returned include the store, owner, latitude, longitude, and number of slurpee sales of a store.
 
 ## Sample
 
@@ -25,7 +25,7 @@ To get top 3 stores for slurpees within 5km radius of 49.8951° N latitude and 9
 https://slurpeesales.mb.ca/api/top_3?lat=49.8951&lng=-97.1384&radius=5
 
 ### Response
-Response will contain a list of JSON objects where each contains the name of store, owner, latitude, longitude and sales per day. The result data will be formatted using JSON as follows:
+Response will contain a list of JSON objects where each contains the name of store, owner, latitude, longitude and sales during the year of the request. The result data will be formatted using JSON as follows:
 
 ```
 {
