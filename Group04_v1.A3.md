@@ -2,40 +2,53 @@
 
 ## API description
 
-This API takes a location in coordinates and a radius around that location, and returns the top 3 most popular 7Elevens in that radius as well as the number of slurpees they sold that year. This allows customers to find a 7Eleven branch near to them and decide which one to visit based on other customer’s preferences. It can also be used by management teams to check on a location’s performance.
+This API takes a location in coordinates and a radius around that location, and returns the 3 most popular stores in that radius as well as the number of slurpees they sold that year. This allows customers to find a store near to them and decide which one to visit based on other customer’s preferences. This can also be used by management teams to check on a location’s performance. The API returns information for Manitoba based locations only.
 
-## Endpoint with Parameters
+## Endpoint and Parameters
+Do the following GET request to get 3 most popular store for slurpees. 
 
-1. api/json/all- This is going to display all slurpee stores' data located in Manitoba.
+### Endpoint
+https://slurpeesales.mb.ca/api/top_3
 
-2. api/json/search- This endpoint has 3 parameters. This request will return most popular 7 eleven data based on these parameters listed below.
+### Parameters
+   * lat (float): Latitude of current location in decimal degrees. Required.
+   * lng (float): Longitude of current location in decimal degrees. Required.
+   * radius(int): Desired radius for the search in KM. Optional. Default value 10 KM.
 
-   - lat (float): Latitude of current location in decimal degrees. Required.
-   - lng (float): Longitude of current location in decimal degrees. Required.
-   - radius(int): Desired radius for the search in KM. Not required. Default value 10 KM
 
+## Sample
 
-### Sample Response
+### Request
+To get top 3 stores for slurpees within 5km radius of 49.8951° N latitude and 97.1384° W longitude do the following GET request:
+https://slurpeesales.mb.ca/api/top_3?lat=49.8951&lng=-97.1384&radius=5
+
+### Response
+Response will contain a list of JSON objects where each contains the name of store, owner, latitude, longitude and sales per day. The result data will be formatted using JSON as follows:
 
 ```
 {
-“McPhillips7Eleven” : {
-		“Owner”: “Elmo”,
-		“Lng”: 49.8951,
-		“Lat”: -97.1384,
-		“Sales”: 546,
-},
-“Keewatin7Eleven” : {
-		“Owner”: “Fred Rogers”,
-		“Lng”: 49.8951, 
-		“Lat”: 34.1384,
-		“Sales”: 123,
-}
-“Pembina7Eleven” : {
-		“Owner”: “Barney”,
-		“Lng”: 108.8951, 
-		“Lat”: 57.1384,
-		“Sales”: 50,
-}
+	"top_3": [
+			{ 
+				"store": "McPhillips7Eleven",  
+				"owner": "Elmo", 
+				"lat": 49.8951, 
+				"lng": -97.1384, 
+				"sales": 546
+			},
+			{ 
+				"store": "Keewatin7Eleven", 
+				"owner": "Fred Rogers", 
+				"lat": 49.8951, 
+				"lng": 34.1384, 
+				"sales": 123
+			},
+			{ 
+				"store": "Pembina7Eleven", 
+				"owner": "“Barney”", 
+				"lat": 108.8951, 
+				"lng": 57.1384, 
+				"sales": 50 
+			}
+		 ]
 }
 ```
