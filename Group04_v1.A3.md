@@ -15,6 +15,8 @@ https://slurpeesales.mb.ca/api/top_3
    * lng (float): Longitude of current location in decimal degrees. Required.
    * radius(int): Desired radius for the search in KM. Optional. Default value 10 KM.
 
+## Description and resources:
+The resources returned include the store, owner, coordinates, and number of slurpee sales of a store.
 
 ## Sample
 
